@@ -6,3 +6,8 @@
 //
 
 import Foundation
+struct Activity{
+    var name : String
+    var description : String
+    var doodleimg : String
+}
