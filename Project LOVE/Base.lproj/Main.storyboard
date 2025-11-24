@@ -68,9 +68,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PCG-Dw-0Ls">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PCG-Dw-0Ls">
                                 <rect key="frame" x="17" y="265" width="361" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="j1e-xl-3zh">
                                     <size key="itemSize" width="361" height="99"/>
@@ -93,6 +92,9 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tXY-iL-ONj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PCG-Dw-0Ls" firstAttribute="centerX" secondItem="IQb-Tk-nO6" secondAttribute="centerX" id="u2d-Kv-1QR"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Activities for Her" id="YZe-ZV-Zdu"/>
                 </viewController>

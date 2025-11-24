@@ -8,7 +8,9 @@
 import UIKit
 
 class ActivityCollectionViewCell: UICollectionViewCell {
-
+@IBOutlet weak var activityImageView: UIImageView!
+    @IBOutlet weak var activityNameLabel: UILabel!
+    @IBOutlet weak var activityDescriptionLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
