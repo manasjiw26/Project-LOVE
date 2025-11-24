@@ -42,6 +42,11 @@
                 <constraint firstAttribute="bottom" secondItem="L5v-fG-qtK" secondAttribute="bottom" id="psc-Bl-jp3"/>
             </constraints>
             <size key="customSize" width="582" height="229"/>
+            <connections>
+                <outlet property="activityDescriptionLabel" destination="Ozu-CN-dOh" id="SqH-UA-uV4"/>
+                <outlet property="activityImageView" destination="L5v-fG-qtK" id="Dyn-cs-vl7"/>
+                <outlet property="activityNameLabel" destination="6XY-SP-Id5" id="EtM-jQ-aJK"/>
+            </connections>
             <point key="canvasLocation" x="543.51145038167942" y="216.5492957746479"/>
         </collectionViewCell>
     </objects>
