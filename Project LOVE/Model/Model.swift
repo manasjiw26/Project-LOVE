@@ -14,3 +14,8 @@ struct Activity{
     var image : String
     var time : String
 }
+
+struct Reward{
+    var image : String
+    var name : String
+}

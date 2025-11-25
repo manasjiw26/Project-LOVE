@@ -18,10 +18,43 @@
                     <view key="view" contentMode="scaleToFill" id="arW-wo-EUg">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qV7-Xm-a6B">
+                                <rect key="frame" x="0.0" y="172" width="393" height="563"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="m7F-qT-DFG">
+                                    <size key="itemSize" width="274" height="169"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8l4-a3-nVI">
+                                        <rect key="frame" x="59.666666666666664" y="0.0" width="274" height="169"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="J7T-M2-YUK">
+                                            <rect key="frame" x="0.0" y="0.0" width="274" height="169"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <size key="customSize" width="274" height="169"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="2qB-4a-Lnx"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="qV7-Xm-a6B" firstAttribute="top" secondItem="2qB-4a-Lnx" secondAttribute="top" id="RUQ-qM-xtv"/>
+                            <constraint firstItem="qV7-Xm-a6B" firstAttribute="leading" secondItem="2qB-4a-Lnx" secondAttribute="leading" id="icA-Bt-gKB"/>
+                            <constraint firstItem="2qB-4a-Lnx" firstAttribute="trailing" secondItem="qV7-Xm-a6B" secondAttribute="trailing" id="lxU-Gu-u8s"/>
+                            <constraint firstItem="qV7-Xm-a6B" firstAttribute="bottom" secondItem="2qB-4a-Lnx" secondAttribute="bottom" id="uAY-mJ-nGg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Explore" id="l8n-FT-vUK"/>
+                    <connections>
+                        <outlet property="activity_collection" destination="qV7-Xm-a6B" id="xGs-L2-e5V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KwX-vt-cmy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -46,7 +79,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MlW-Ad-Nn7"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.9137254901960784" green="0.90980392156862744" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Vibe" id="YIx-XY-Dzi">
@@ -151,7 +184,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="spj-Vf-BUh"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="0ya-Ei-DQx" firstAttribute="leading" secondItem="spj-Vf-BUh" secondAttribute="leading" constant="21" id="mCv-0c-626"/>
                             <constraint firstItem="spj-Vf-BUh" firstAttribute="bottom" secondItem="0ya-Ei-DQx" secondAttribute="bottom" constant="10" id="sMC-C7-znF"/>
@@ -253,6 +286,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

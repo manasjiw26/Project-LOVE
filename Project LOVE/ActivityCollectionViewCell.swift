@@ -26,5 +26,10 @@ class ActivityCollectionViewCell: UICollectionViewCell {
         
         
     }
+    func configureCell(activity: Activity) {
+        activityImageView.image = UIImage(named: activity.image)
+        activityNameLabel.text = activity.name
+        activityDescriptionLabel.text = activity.description
+    }
 
 }
