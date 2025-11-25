@@ -8,12 +8,23 @@
 import UIKit
 
 class ActivityCollectionViewCell: UICollectionViewCell {
-@IBOutlet weak var activityImageView: UIImageView!
+    @IBOutlet weak var activityImageView: UIImageView!
     @IBOutlet weak var activityNameLabel: UILabel!
     @IBOutlet weak var activityDescriptionLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        contentView.layer.cornerRadius = 10
+        contentView.layer.masksToBounds = true
+        contentView.backgroundColor = .white
+    }
+    func configureCells(activity: Activity) {
+        activityNameLabel.text = activity.name
+        activityDescriptionLabel.text = activity.description
+        activityImageView.image = UIImage(named: activity.image)
+        
+        
     }
     func configureCell(activity: Activity) {
         activityImageView.image = UIImage(named: activity.image)

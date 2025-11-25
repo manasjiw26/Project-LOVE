@@ -20,6 +20,9 @@ class DataStore {
             Activity(name: "Wholesome Craft Challenge", description: "Make a doodle / note / digital collage for her", image: "Activityimage", time: "5 mins"),
             Activity(name: "Memory Lane Marathon", description: "Make a mini reel using your photos and favorite audio", image: "Activityimage", time: "5 mins"),
             Activity(name: "Stuff-A-Memory Day", description: "Buy a tine plush, both name it and take care of it together", image: "Activityimage", time: "5 mins"),
+            Activity(name: "Memory Lane Marathon", description: "Make a mini reel using your photos and favorite audio", image: "Activityimage", time: "5 mins"),
+            Activity(name: "Memory Lane Marathon", description: "Make a mini reel using your photos and favorite audio", image: "Activityimage", time: "5 mins"),
+            Activity(name: "Stuff-A-Memory Day", description: "Buy a tine plush, both name it and take care of it together", image: "Activityimage", time: "5 mins"),
             Activity(name: "Memory Lane Marathon", description: "Make a mini reel using your photos and favorite audio", image: "Activityimage", time: "5 mins")]
         
         self.activities = sampleActivities
@@ -41,3 +44,10 @@ class DataStore {
     }
 }
 let dataStore = DataStore()
+    func getActivities() -> [Activity] {
+        return activities
+    }
+    
+    
+}
+var dataStore = DataStore()
