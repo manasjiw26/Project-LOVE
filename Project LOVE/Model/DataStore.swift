@@ -7,10 +7,11 @@
 import Foundation
 
 class DataStore {
-    private var activities : [Activity] = []
+     var activities : [Activity] = []
     
     init() {
         loadSampleData()
+        loadSampleRewards()
     }
     func loadSampleData() {
         var sampleActivities: [Activity] = [
@@ -23,5 +24,20 @@ class DataStore {
         
         self.activities = sampleActivities
     }
-    var dataStore = DataStore()
+    
+     var rewards: [Reward] = []
+    
+    func loadSampleRewards() {
+        var sampleRewards: [Reward] = [
+            Reward(image: "Send_Hug", name: "Send hug"),
+            Reward(image: "Send_Flower", name: "Send flower"),
+            Reward(image: "Send_Kiss", name: "Send kiss"),
+            Reward(image: "Send_Heart", name: "Send heart"),
+            Reward(image: "Send_Note", name: "Send note"),
+            Reward(image: "Send_Wave", name: "Send wave"),
+            Reward(image: "Send_Hug", name: "Send high five")
+        ]
+        self.rewards = sampleRewards
+    }
 }
+let dataStore = DataStore()
