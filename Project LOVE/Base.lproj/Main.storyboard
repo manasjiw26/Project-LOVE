@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -68,24 +69,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PCG-Dw-0Ls">
-                                <rect key="frame" x="17" y="265" width="361" height="99"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PCG-Dw-0Ls">
+                                <rect key="frame" x="0.0" y="224" width="393" height="511"/>
+                                <color key="backgroundColor" name="AppBackground"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="j1e-xl-3zh">
-                                    <size key="itemSize" width="361" height="99"/>
+                                    <size key="itemSize" width="393" height="115"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="u2d-gf-via" customClass="ActivityCollectionViewCell" customModule="Project_LOVE" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="361" height="99"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" id="u2d-gf-via" customClass="ActivityCollectionViewCell" customModule="Project_LOVE" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="0.0" width="361" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="IOv-YI-gUd">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="99"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="115"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="361" height="99"/>
+                                        <size key="customSize" width="361" height="115"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -93,10 +94,18 @@
                         <viewLayoutGuide key="safeArea" id="tXY-iL-ONj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="PCG-Dw-0Ls" firstAttribute="centerX" secondItem="IQb-Tk-nO6" secondAttribute="centerX" id="u2d-Kv-1QR"/>
+                            <constraint firstAttribute="bottom" secondItem="PCG-Dw-0Ls" secondAttribute="bottom" constant="-117" id="B2T-R9-B2C"/>
+                            <constraint firstItem="PCG-Dw-0Ls" firstAttribute="top" secondItem="tXY-iL-ONj" secondAttribute="top" id="Leg-A2-Qdn"/>
+                            <constraint firstItem="tXY-iL-ONj" firstAttribute="bottom" secondItem="PCG-Dw-0Ls" secondAttribute="bottom" id="Wsd-5x-ckp"/>
+                            <constraint firstItem="PCG-Dw-0Ls" firstAttribute="centerX" secondItem="IQb-Tk-nO6" secondAttribute="centerX" id="crg-xo-iiR"/>
+                            <constraint firstItem="tXY-iL-ONj" firstAttribute="trailing" secondItem="PCG-Dw-0Ls" secondAttribute="trailing" id="qy5-KS-45H"/>
+                            <constraint firstItem="PCG-Dw-0Ls" firstAttribute="leading" secondItem="tXY-iL-ONj" secondAttribute="leading" id="sV1-kW-efC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Activities for Her" id="YZe-ZV-Zdu"/>
+                    <connections>
+                        <outlet property="activityCollectionView" destination="PCG-Dw-0Ls" id="NuW-P3-Tou"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jLq-28-iSK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -239,6 +248,9 @@
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="message" catalog="system" width="128" height="106"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <namedColor name="AppBackground">
+            <color red="0.94900000095367432" green="0.94900000095367432" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
